@@ -1,6 +1,6 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
-
+# 
 name: Server
 
 on:
@@ -37,10 +37,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/${{ env.PACKAGE_PATH }}'
-         zip -r release.zip .
-         popd
-         cp ./${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/${{ env.PACKAGE_PATH }}/release.zip ./release.zip
+          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/${{ env.PACKAGE_PATH }}'
+          zip -r release.zip .
+          popd
+          cp ./${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/${{ env.PACKAGE_PATH }}/release.zip ./release.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
