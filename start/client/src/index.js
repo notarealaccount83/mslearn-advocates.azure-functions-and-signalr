@@ -1,5 +1,5 @@
 import './style.css';
-import { BACKEND_URL } from './env';
+//import { BACKEND_URL } from './env';
 
 const app = new Vue({
     el: '#app',
@@ -12,7 +12,7 @@ const app = new Vue({
         async getStocks() {
             try {
 
-                const url = `${BACKEND_URL}/api/getStocks`;
+                const url = `https://api-laura.azurewebsites.net/api/getStocks`;
                 console.log('Fetching stocks from ', url);
 
                 const response = await fetch(url);
